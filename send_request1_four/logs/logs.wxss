@@ -1,0 +1,124 @@
+/* pages/logs/logs.wxss */
+image {
+  width: 100%;
+  height: 700rpx; /* 调整图片高度以腾出更多空间 */
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px; /* 减少padding以腾出更多空间 */
+  background-color: #f5f5f5;
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.url-input {
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 8px;
+}
+
+.btn-rect {
+  margin: 5px;
+  width: 100%;
+  height: 40px;
+  background-color: #007aff;
+  color: white;
+  border: none;
+  border-radius: 5px; /* 矩形按钮 */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-rect:hover {
+  background-color: #005bb5;
+}
+
+.btn {
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: #007aff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background-color: #005bb5;
+}
+
+.img {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-img {
+  width: 80%;
+  max-width: 480px;
+  border-radius: 10px;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.servo-controls {
+  margin-top: 10px; /* 减少margin以腾出更多空间 */
+  width: 100%;
+  text-align: center;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.button-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px; /* 减少margin以腾出更多空间 */
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px; /* 减少margin以腾出更多空间 */
+}
+
+.button-row .btn {
+  flex: 0 0 auto;
+  margin: 0 5px;
+}
+
+.video-player {
+  width: 100%;
+  height: 500rpx; /* 根据需要调整高度 */
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

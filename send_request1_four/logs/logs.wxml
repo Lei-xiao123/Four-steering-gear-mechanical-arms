@@ -1,0 +1,36 @@
+<!--pages/logs/logs.wxml-->
+
+<wux-notification id="wux-notiification"/>
+<view class="page">
+    <input type="text" placeholder="输入视频网址" bindinput="onUrlInput" class="url-input"/>
+    <button bindtap="showVideo" class="btn-rect">显示视频</button>
+
+    <!-- 视频流显示区域 -->
+    <image src="{{videoUrl}}" class="video-player" wx:if="{{videoVisible}}"></image>
+
+    <!-- 控制1组舵机的按钮 -->
+    <view class="servo-controls">
+        <text>舵机当前角度: {{currentAngle1}}°, {{currentAngle2}}°</text>
+        <view class="button-grid">
+            <button bindtap="increaseAngle1" bindlongpress="startIncreaseAngle1" bindtouchend="stopAngleChange" class="btn">左</button>
+            <view class="button-row">
+                <button bindtap="decreaseAngle2" bindlongpress="startDecreaseAngle2" bindtouchend="stopAngleChange" class="btn">上</button>
+                <button bindtap="resetAllAngles" class="btn">重置</button>
+                <button bindtap="increaseAngle2" bindlongpress="startIncreaseAngle2" bindtouchend="stopAngleChange" class="btn">下</button>
+            </view>
+            <button bindtap="decreaseAngle1" bindlongpress="startDecreaseAngle1" bindtouchend="stopAngleChange" class="btn">右</button>
+        </view>
+    </view>
+
+    <!-- 控制第二组舵机的按钮 -->
+    <view class="servo-controls">
+        <text>舵机当前角度: {{currentAngle3}}°, {{currentAngle4}}°</text>
+        <view class="button-row">
+            <button bindtap="increaseAngle4" bindlongpress="startIncreaseAngle4" bindtouchend="stopAngleChange" class="btn">紧</button>
+            <button bindtap="decreaseAngle3" bindlongpress="startDecreaseAngle3" bindtouchend="stopAngleChange" class="btn">降</button>
+            
+            <button bindtap="increaseAngle3" bindlongpress="startIncreaseAngle3" bindtouchend="stopAngleChange" class="btn">台</button>
+            <button bindtap="decreaseAngle4" bindlongpress="startDecreaseAngle4" bindtouchend="stopAngleChange" class="btn">松</button>
+        </view>
+    </view>
+</view>
